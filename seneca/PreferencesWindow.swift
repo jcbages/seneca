@@ -18,6 +18,11 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     
     var delegate: PreferencesWindowDelegate?
 
+    /*
+     * The UI components related to this particular view, specified 
+     * to handle them in this controller
+    */
+
     @IBOutlet weak var startAtLoginCheckBox: NSButton!
     
     @IBOutlet weak var accountTextField: NSTextField!
@@ -40,24 +45,32 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         self.window?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
         
+        // Main app persistence unit, here is where saving/loading user credential happens
         let defaults = UserDefaults.standard
         
+        // Retrieving and setting the default username
         let account = defaults.string(forKey: "account") ?? BLANK_FIELD_TEXT
         accountTextField.stringValue = account
         
+        // Retrieving and setting the default password
         let password = defaults.string(forKey: "password") ?? BLANK_FIELD_TEXT
         passwordTextField.stringValue = password
     }
     
     func windowWillClose(_ notification: Notification) {
+        // Save the options in the app main persistence unit
         let defaults = UserDefaults.standard
         
+        // Save the open at login option from the checkbox
         defaults.setValue(startAtLoginCheckBox.stringValue, forKey: "start")
         
+        // Save the account text field
         defaults.setValue(accountTextField.stringValue, forKey: "account")
         
+        // Save the password text field
         defaults.setValue(passwordTextField.stringValue, forKey: "password")
         
+        // Notify an update to the delegate
         delegate?.preferencesDidUpdate()
     }
     
