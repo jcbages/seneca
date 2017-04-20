@@ -20,7 +20,8 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="0WM-K8-oad">
             <items>
-                <menuItem title="Status" id="fu0-sZ-OZS">
+                <menuItem title="Estas en línea" image="NSStatusAvailable" id="fu0-sZ-OZS">
+                    <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="7vv-TM-oUh"/>
@@ -45,4 +46,7 @@
             <point key="canvasLocation" x="99" y="122.5"/>
         </menu>
     </objects>
+    <resources>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+    </resources>
 </document>

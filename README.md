@@ -22,10 +22,10 @@
 - [ ] Add about view
 - [ ] Add preferences view
 - [ ] Save credentials and checkbox in preferences
-- [ ] Add status text to menu
-- [ ] Add status text to preferences
+- [x] Add status text with icon to menu
+- [ ] Add status text with icon to preferences
 - [ ] Add header to preferences
-- [ ] Close app when click on quit
+- [x] Close app when click on quit
 - [ ] Start app on login if configured as such
 - [ ] Check if ssid is SENECA
 - [ ] Check if its connected
