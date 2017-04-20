@@ -13,37 +13,55 @@ class SENECALoginController {
     
     let BASE_URL = "https://wlan.uniandes.edu.co/login.html"
     
+    let WIFI_NETWORK_NAME = "SENECA"
+    
     func doConnectionPOST() {
     }
     
-    
-}
-
-class Discovery {
-    
-    var currentInterface: CWInterface
-    var interfacesNames: [String] = []
-    var networks: Set<CWNetwork> = []
-    
-    // Failable init using default interface. Fails if no connection detected
-    init?() {
+    func discoverReacheableNetworks() -> Set<CWNetwork>? {
+        var currentInterface: CWInterface
+        var interfacesNames: [String] = []
+        var networks: Set<CWNetwork> = []
+        
+        // Failable init using default interface. Fails if no connection detected
         if let defaultInterface = CWWiFiClient.shared().interface(),
             let name = defaultInterface.interfaceName {
-            self.currentInterface = defaultInterface
-            self.interfacesNames.append(name)
-            self.findNetworks()
+            currentInterface = defaultInterface
+            interfacesNames.append(name)
+            // Fetch reacheable WiFi networks
+            do {
+                networks = try currentInterface.scanForNetworks(withSSID: nil)
+                return networks
+            } catch let error as NSError {
+                print("Error: \(error.localizedDescription)")
+            }
         } else {
-            return nil
+            print("No availlable resources")
         }
+        
+        return nil;
     }
     
-    // Fetch detectable WIFI networks
-    func findNetworks() {
-        do {
-            self.networks = try currentInterface.scanForNetworks(withSSID: nil)
-        } catch let error as NSError {
-            print("Error: \(error.localizedDescription)")
+    func recheableSeneca() -> Bool {
+        
+        for network in discoverReacheableNetworks()! {
+            let currentSSID = network.ssid!
+            print(currentSSID)
+            if(currentSSID == WIFI_NETWORK_NAME) {
+                return true
+            }
         }
+        
+        return false
     }
+    
+    func connectedToSeneca() {
+        
+    }
+    
+    func connectedToInternet() {
+        
+    }
+    
     
 }
