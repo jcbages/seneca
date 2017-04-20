@@ -17,20 +17,21 @@
 
 ## TODO
 - [x] Change menu with the current options
-- [x] Add shortcut text and function to quit
-- [x] Add shortcut text and function to preferences
-- [ ] Add about view
-- [ ] Add preferences view
-- [ ] Save credentials and checkbox in preferences
-- [x] Add status text with icon to menu
-- [ ] Add status text with icon to preferences
-- [ ] Add header to preferences
-- [x] Close app when click on quit
-- [ ] Start app on login if configured as such
-- [ ] Check if ssid is SENECA
-- [ ] Check if its connected
-- [ ] Listen to connection changes on wifi
-- [ ] Check connection every x time
+- [x] Add shortcut text and function to 'Quit' button
+- [x] Add shortcut text and function to 'Preferences' button
+- [ ] Add 'About Us' view
+- [ ] Add 'Preferences' view
+- [x] Save/Load credentials and checkbox in preferences
+- [x] Add status (text + icon) to menu
+- [ ] Add status (text + icon) to 'Preferences' view
+- [ ] Add header title to 'Preferences' view
+- [ ] Add header title to 'About Us' view
+- [x] Close when click on 'Quit' button
+- [ ] Start on login if configured as such
+- [ ] Check if SSID == SENECA
+- [ ] Check if its connected to SENECA
+- [ ] Listen to connection changes on WiFi
+- [ ] Check connection every X time
 - [ ] Sleep so battery consumption is ~0
 - [ ] Perform automatic connection with credentials
 
