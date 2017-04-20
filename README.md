@@ -24,8 +24,8 @@
 - [x] Save/Load credentials and checkbox in preferences
 - [x] Add status (text + icon) to menu
 - [ ] Add status (text + icon) to 'Preferences' view
-- [ ] Add header title to 'Preferences' view
-- [ ] Add header title to 'About Us' view
+- [x] Add header title to 'Preferences' view
+- [x] Add header title to 'About Us' view
 - [x] Close when click on 'Quit' button
 - [ ] Start on login if configured as such
 - [ ] Check if SSID == SENECA
