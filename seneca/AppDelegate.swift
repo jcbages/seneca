@@ -12,6 +12,15 @@ let BLANK_FIELD_TEXT = ""
 
 let SENECA_WEBPAGE = "https://books.google.com.co/"
 
+let STATUS_CONNECTED_MESSAGE = "Estás conectado"
+let STATUS_CONNECTED_ICON = "NSStatusAvailable"
+
+let STATUS_DISCONNECTED_MESSAGE = "Estás desconectado"
+let STATUS_DISCONNECTED_ICON = "NSStatusUnavailable"
+
+let STATUS_UNAVAILABLE_MESSAGE = "No estás en SENECA"
+let STATUS_UNAVAILABLE_ICON = "NSStatusNone"
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
 
@@ -20,6 +29,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
     
     var preferencesWindow: PreferencesWindow!
     var aboutWindow: AboutWindow!
+    
+    @IBOutlet weak var connectionStatusItem: NSMenuItem!
+    
+    @IBAction func connectionStatusItemClicked(_ sender: NSMenuItem) {
+    }
     
     @IBAction func aboutClicked(_ sender: NSMenuItem) {
         aboutWindow.showWindow(nil)
@@ -45,6 +59,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         preferencesWindow = PreferencesWindow()
         preferencesWindow.delegate = self
         aboutWindow = AboutWindow()
+        
+        // Default status at startup
+        changeStatusToDisconnected()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -55,6 +72,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         let defaults = UserDefaults.standard
         let account = defaults.string(forKey: "start") ?? BLANK_FIELD_TEXT
         NSLog(account)
+    }
+    
+    func changeStatusToConnected() {
+        connectionStatusItem.title = STATUS_CONNECTED_MESSAGE
+        connectionStatusItem.image = NSImage(named: STATUS_CONNECTED_ICON)
+    }
+    
+    func changeSatusToUnavailable() {
+        connectionStatusItem.title = STATUS_UNAVAILABLE_MESSAGE
+        connectionStatusItem.image = NSImage(named: STATUS_UNAVAILABLE_ICON)
+    }
+    
+    func changeStatusToDisconnected() {
+        connectionStatusItem.title = STATUS_DISCONNECTED_MESSAGE
+        connectionStatusItem.image = NSImage(named: STATUS_DISCONNECTED_ICON)
     }
 
 
