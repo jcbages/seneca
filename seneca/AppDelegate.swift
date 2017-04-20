@@ -63,11 +63,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         // Default status at startup
         changeStatusToDisconnected()
         
-        if let discovery = Discovery() {
-            for network in discovery.networks {
-                print(network.ssid!)
-            }
-        }
+        let connectionController = SENECALoginController()
+        
+        print(connectionController.recheableSeneca())
+        
+        
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
