@@ -10,8 +10,6 @@ import Cocoa
 
 let BLANK_FIELD_TEXT = ""
 
-let SENECA_WEBPAGE = "https://books.google.com.co/"
-
 let STATUS_CONNECTED_MESSAGE = "Estás conectado"
 let STATUS_CONNECTED_ICON = "NSStatusAvailable"
 
@@ -39,10 +37,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         aboutWindow.showWindow(nil)
     }
     
-    @IBAction func documentationClicked(_ sender: NSMenuItem) {
-        if let url = URL(string: SENECA_WEBPAGE), NSWorkspace.shared().open(url) {}
-    }
-    
     @IBAction func preferencesClicked(_ sender: NSMenuItem) {
         preferencesWindow.showWindow(nil)
     }
@@ -66,19 +60,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         let connectionController = SENECALoginController()
         
         print(connectionController.recheableSeneca())
-        
-        
-        
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
     
     func preferencesDidUpdate() {
+        // Load the persistence unit
         let defaults = UserDefaults.standard
-        let account = defaults.string(forKey: "start") ?? BLANK_FIELD_TEXT
-        NSLog(account)
+
+        // print
+        print("User account:", defaults.string(forKey: "account")!)
+        print("User password:", defaults.string(forKey: "password")!)
+        print("Start at login:", defaults.string(forKey: "start")!)
     }
     
     func changeStatusToConnected() {
@@ -95,7 +86,5 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         connectionStatusItem.title = STATUS_DISCONNECTED_MESSAGE
         connectionStatusItem.image = NSImage(named: STATUS_DISCONNECTED_ICON)
     }
-
-
 }
 

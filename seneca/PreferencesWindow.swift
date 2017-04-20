@@ -18,21 +18,11 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     
     var delegate: PreferencesWindowDelegate?
 
-    /*
-     * The UI components related to this particular view, specified 
-     * to handle them in this controller
-    */
-
     @IBOutlet weak var startAtLoginCheckBox: NSButton!
     
     @IBOutlet weak var accountTextField: NSTextField!
     
     @IBOutlet weak var passwordTextField: NSSecureTextField!
-    
-    @IBAction func saveClicked(_ sender: NSButton) {
-        
-        self.close()
-    }
     
     override var windowNibName : String! {
         return "PreferencesWindow"
