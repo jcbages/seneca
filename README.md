@@ -20,10 +20,9 @@
 - [x] Add shortcut text and function to 'Quit' button
 - [x] Add shortcut text and function to 'Preferences' button
 - [ ] Add 'About Us' view
-- [ ] Add 'Preferences' view
+- [x] Add 'Preferences' view
 - [x] Save/Load credentials and checkbox in preferences
 - [x] Add status (text + icon) to menu
-- [ ] Add status (text + icon) to 'Preferences' view
 - [x] Add header title to 'Preferences' view
 - [x] Add header title to 'About Us' view
 - [x] Close when click on 'Quit' button
