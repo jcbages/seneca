@@ -1,11 +1,3 @@
-//
-//  PreferencesWindow.swift
-//  seneca
-//
-//  Created by Sebastian Camilo Valencia on 4/18/17.
-//  Copyright © 2017 Sebastian Camilo Valencia. All rights reserved.
-//
-
 import Cocoa
 
 protocol PreferencesWindowDelegate {
@@ -13,8 +5,6 @@ protocol PreferencesWindowDelegate {
 }
 
 class PreferencesWindow: NSWindowController, NSWindowDelegate {
-    
-    let DEFAULT_CHECKED = ""
     
     var delegate: PreferencesWindowDelegate?
 
@@ -37,13 +27,17 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         
         // Main app persistence unit, here is where saving/loading user credential happens
         let defaults = UserDefaults.standard
-        
-        // Retrieving and setting the default username
-        let account = defaults.string(forKey: "account") ?? BLANK_FIELD_TEXT
+
+        // Retrieve and set the open at login option
+        let start = defaults.integer(forKey: START)
+        startAtLoginCheckBox.state = start
+
+        // Retrieve and set the defaults username
+        let account = defaults.string(forKey: ACCOUNT) ?? BLANK_FIELD_TEXT
         accountTextField.stringValue = account
         
-        // Retrieving and setting the default password
-        let password = defaults.string(forKey: "password") ?? BLANK_FIELD_TEXT
+        // Retrieve and set the defaults password
+        let password = defaults.string(forKey: PASSWORD) ?? BLANK_FIELD_TEXT
         passwordTextField.stringValue = password
     }
     
@@ -52,13 +46,13 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         let defaults = UserDefaults.standard
         
         // Save the open at login option from the checkbox
-        defaults.setValue(startAtLoginCheckBox.stringValue, forKey: "start")
+        defaults.setValue(startAtLoginCheckBox.state, forKey: START)
         
         // Save the account text field
-        defaults.setValue(accountTextField.stringValue, forKey: "account")
+        defaults.setValue(accountTextField.stringValue, forKey: ACCOUNT)
         
         // Save the password text field
-        defaults.setValue(passwordTextField.stringValue, forKey: "password")
+        defaults.setValue(passwordTextField.stringValue, forKey: PASSWORD)
         
         // Notify an update to the delegate
         delegate?.preferencesDidUpdate()
