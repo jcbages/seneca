@@ -1,11 +1,3 @@
-//
-//  AboutWindow.swift
-//  seneca
-//
-//  Created by Sebastian Camilo Valencia on 4/18/17.
-//  Copyright © 2017 Sebastian Camilo Valencia. All rights reserved.
-//
-
 import Cocoa
 
 let APP_VERSION = "1.0.0"
