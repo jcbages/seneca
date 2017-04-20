@@ -65,9 +65,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         
         let connectionController = SENECALoginController()
         
-        print(connectionController.recheableSeneca())
-        
-        
+        print(connectionController.isSenecaReacheable())
         
     }
 
@@ -95,7 +93,4 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         connectionStatusItem.title = STATUS_DISCONNECTED_MESSAGE
         connectionStatusItem.image = NSImage(named: STATUS_DISCONNECTED_ICON)
     }
-
-
 }
-
