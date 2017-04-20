@@ -1,15 +1,14 @@
-//
-//  AppDelegate.swift
-//  seneca
-//
-//  Created by Sebastian Camilo Valencia on 4/18/17.
-//  Copyright © 2017 Sebastian Camilo Valencia. All rights reserved.
-//
-
 import Cocoa
 
+// Blank text field default string
 let BLANK_FIELD_TEXT = ""
 
+// User preferences keys
+let START = "start"
+let ACCOUNT = "account"
+let PASSWORD = "password"
+
+// Status message & icon foreach possible state
 let STATUS_CONNECTED_MESSAGE = "Estás conectado"
 let STATUS_CONNECTED_ICON = "NSStatusAvailable"
 
@@ -67,9 +66,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         let defaults = UserDefaults.standard
 
         // print
-        print("User account:", defaults.string(forKey: "account")!)
-        print("User password:", defaults.string(forKey: "password")!)
-        print("Start at login:", defaults.string(forKey: "start")!)
+        print("User account:", defaults.string(forKey: ACCOUNT)!)
+        print("User password:", defaults.string(forKey: PASSWORD)!)
+        print("Start at login:", defaults.integer(forKey: START))
     }
     
     func changeStatusToConnected() {
