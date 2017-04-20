@@ -15,4 +15,23 @@
 
 ## Developemnt
 
+## TODO
+- [x] change menu with the current options
+- [x] add shortcut text and function to quit
+- [x] add shortcut text and function to preferences
+- [ ] add about view
+- [ ] add preferences view
+- [ ] save credentials and checkbox in preferences
+- [ ] add status text to menu
+- [ ] add status text to preferences
+- [ ] add header to preferences
+- [ ] close app when click on quit
+- [ ] start app on login if configured as such
+- [ ] check if ssid is SENECA
+- [ ] check if its connected
+- [ ] listen to connection changes on wifi
+- [ ] check connection every x time
+- [ ] sleep so battery consumption is ~0
+- [ ] perform automatic connection with credentials
+
 Seneca makes use of the web based hotspot of the SENECA network.
