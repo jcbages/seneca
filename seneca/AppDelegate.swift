@@ -62,6 +62,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         
         // Default status at startup
         changeStatusToDisconnected()
+        
+        if let discovery = Discovery() {
+            for network in discovery.networks {
+                print(network.ssid!)
+            }
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
