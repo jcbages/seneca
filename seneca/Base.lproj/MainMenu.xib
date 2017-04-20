@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -24,33 +24,25 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="7vv-TM-oUh"/>
-                <menuItem title="About seneca" id="iNp-Qg-T2O">
+                <menuItem title="Acerca de" id="iNp-Qg-T2O">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="aboutClicked:" target="Voe-Tx-rLC" id="WRz-Qy-h3x"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Documentation..." id="pnj-Mq-EyI">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="documentationClicked:" target="Voe-Tx-rLC" id="w3t-ED-4Pg"/>
-                    </connections>
-                </menuItem>
-                <menuItem title="Preferences..." id="6uM-6y-NF2">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Preferencias" keyEquivalent="," id="6uM-6y-NF2">
                     <connections>
                         <action selector="preferencesClicked:" target="Voe-Tx-rLC" id="585-bX-4O4"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="hWs-I7-VKr"/>
-                <menuItem title="Quit" id="3zN-iK-IUA">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Quitar" keyEquivalent="q" id="3zN-iK-IUA">
                     <connections>
                         <action selector="quitClicked:" target="Voe-Tx-rLC" id="KFs-9C-Pvb"/>
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="99" y="123"/>
+            <point key="canvasLocation" x="99" y="122.5"/>
         </menu>
     </objects>
 </document>
