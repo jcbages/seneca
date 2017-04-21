@@ -42,7 +42,7 @@
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="hWs-I7-VKr"/>
-                <menuItem title="Quitar" keyEquivalent="q" id="3zN-iK-IUA">
+                <menuItem title="Salir" keyEquivalent="q" id="3zN-iK-IUA">
                     <connections>
                         <action selector="quitClicked:" target="Voe-Tx-rLC" id="KFs-9C-Pvb"/>
                     </connections>

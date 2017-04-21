@@ -60,9 +60,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         // Default status at startup
         changeStatusToDisconnected()
         
-        let connectionController = SENECALoginController()
-        
-        print(connectionController.recheableSeneca())
+        //let connectionController = SENECALoginController()
+        //print(connectionController.isSenecaReacheable())
     }
     
     func preferencesDidUpdate() {
@@ -89,4 +88,3 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         connectionStatusItem.image = NSImage(named: STATUS_DISCONNECTED_ICON)
     }
 }
-

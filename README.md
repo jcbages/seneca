@@ -19,7 +19,7 @@
 - [x] Change menu with the current options
 - [x] Add shortcut text and function to 'Quit' button
 - [x] Add shortcut text and function to 'Preferences' button
-- [ ] Add 'About Us' view
+- [X] Add 'About Us' view
 - [x] Add 'Preferences' view
 - [x] Save/Load credentials and checkbox in preferences
 - [x] Add status (text + icon) to menu

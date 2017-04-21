@@ -26,22 +26,20 @@ class SENECALoginController {
                 return networks
             } catch let error as NSError {
                 print("Error: \(error.localizedDescription)")
+                return nil;
             }
-        } else {
-            print("No availlable resources")
         }
         
         return nil;
     }
     
-    func recheableSeneca() -> Bool {
+    func isSenecaReacheable() -> Bool {
         
-        for network in discoverReacheableNetworks()! {
-            let currentSSID = network.ssid!
-            print(currentSSID)
-            if(currentSSID == WIFI_NETWORK_NAME) {
-                return true
-            }
+        if let networks = discoverReacheableNetworks() {
+            let SSIDs = networks.map {network in network.ssid!}
+            // print(SSIDs)
+            // print(SSIDs.contains(WIFI_NETWORK_NAME))
+            return SSIDs.contains(WIFI_NETWORK_NAME)
         }
         
         return false
