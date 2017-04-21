@@ -26,7 +26,7 @@
 - [x] Add header title to 'Preferences' view
 - [x] Add header title to 'About Us' view
 - [x] Close when click on 'Quit' button
-- [ ] Start on login if configured as such
+- [x] Start on login if configured as such
 - [ ] Check if SSID == SENECA
 - [ ] Check if its connected to SENECA
 - [ ] Listen to connection changes on WiFi
