@@ -15,7 +15,25 @@
 		35FD1DF51EA675F50084A284 /* SENECALoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD1DF41EA675F50084A284 /* SENECALoginController.swift */; };
 		35FD1DF81EA6812E0084A284 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD1DF61EA6812E0084A284 /* PreferencesWindow.swift */; };
 		35FD1DF91EA6812E0084A284 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35FD1DF71EA6812E0084A284 /* PreferencesWindow.xib */; };
+		A1B774A81EA9AC0E00715CBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B774A71EA9AC0E00715CBC /* AppDelegate.m */; };
+		A1B774AB1EA9AC0E00715CBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B774AA1EA9AC0E00715CBC /* main.m */; };
+		A1B774B01EA9AC0E00715CBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B774AF1EA9AC0E00715CBC /* Assets.xcassets */; };
+		A1B774B31EA9AC0E00715CBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B774B11EA9AC0E00715CBC /* Main.storyboard */; };
+		A1B774B81EA9AC9F00715CBC /* seneca helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1B774A41EA9AC0E00715CBC /* seneca helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1B7749E1EA9A75C00715CBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				A1B774B81EA9AC9F00715CBC /* seneca helper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		35F0ADE61EA6E44100840185 /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
@@ -28,10 +46,26 @@
 		35FD1DF41EA675F50084A284 /* SENECALoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SENECALoginController.swift; sourceTree = "<group>"; };
 		35FD1DF61EA6812E0084A284 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 		35FD1DF71EA6812E0084A284 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		A1B774A41EA9AC0E00715CBC /* seneca helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seneca helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B774A61EA9AC0E00715CBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1B774A71EA9AC0E00715CBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1B774AA1EA9AC0E00715CBC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1B774AF1EA9AC0E00715CBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1B774B21EA9AC0E00715CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1B774B41EA9AC0E00715CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1B774B91EA9AF2500715CBC /* seneca.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = seneca.entitlements; sourceTree = "<group>"; };
+		A1B774BA1EA9AF4500715CBC /* seneca helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "seneca helper.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		35FD1DE11EA66E840084A284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B774A11EA9AC0E00715CBC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				35FD1DE61EA66E840084A284 /* seneca */,
+				A1B774A51EA9AC0E00715CBC /* seneca helper */,
 				35FD1DE51EA66E840084A284 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				35FD1DE41EA66E840084A284 /* seneca.app */,
+				A1B774A41EA9AC0E00715CBC /* seneca helper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +96,7 @@
 		35FD1DE61EA66E840084A284 /* seneca */ = {
 			isa = PBXGroup;
 			children = (
+				A1B774B91EA9AF2500715CBC /* seneca.entitlements */,
 				35FD1DE71EA66E840084A284 /* AppDelegate.swift */,
 				35FD1DF61EA6812E0084A284 /* PreferencesWindow.swift */,
 				35F0ADE61EA6E44100840185 /* AboutWindow.swift */,
@@ -73,6 +110,28 @@
 			path = seneca;
 			sourceTree = "<group>";
 		};
+		A1B774A51EA9AC0E00715CBC /* seneca helper */ = {
+			isa = PBXGroup;
+			children = (
+				A1B774BA1EA9AF4500715CBC /* seneca helper.entitlements */,
+				A1B774A61EA9AC0E00715CBC /* AppDelegate.h */,
+				A1B774A71EA9AC0E00715CBC /* AppDelegate.m */,
+				A1B774AF1EA9AC0E00715CBC /* Assets.xcassets */,
+				A1B774B11EA9AC0E00715CBC /* Main.storyboard */,
+				A1B774B41EA9AC0E00715CBC /* Info.plist */,
+				A1B774A91EA9AC0E00715CBC /* Supporting Files */,
+			);
+			path = "seneca helper";
+			sourceTree = "<group>";
+		};
+		A1B774A91EA9AC0E00715CBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1B774AA1EA9AC0E00715CBC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +142,7 @@
 				35FD1DE01EA66E840084A284 /* Sources */,
 				35FD1DE11EA66E840084A284 /* Frameworks */,
 				35FD1DE21EA66E840084A284 /* Resources */,
+				A1B7749E1EA9A75C00715CBC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -93,19 +153,52 @@
 			productReference = 35FD1DE41EA66E840084A284 /* seneca.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A1B774A31EA9AC0E00715CBC /* seneca helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B774B51EA9AC0E00715CBC /* Build configuration list for PBXNativeTarget "seneca helper" */;
+			buildPhases = (
+				A1B774A01EA9AC0E00715CBC /* Sources */,
+				A1B774A11EA9AC0E00715CBC /* Frameworks */,
+				A1B774A21EA9AC0E00715CBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "seneca helper";
+			productName = "seneca helper";
+			productReference = A1B774A41EA9AC0E00715CBC /* seneca helper.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		35FD1DDC1EA66E840084A284 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Sebastian Camilo Valencia";
 				TargetAttributes = {
 					35FD1DE31EA66E840084A284 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = SLF4JZ244S;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					A1B774A31EA9AC0E00715CBC = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = SLF4JZ244S;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -123,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				35FD1DE31EA66E840084A284 /* seneca */,
+				A1B774A31EA9AC0E00715CBC /* seneca helper */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +230,15 @@
 				35FD1DF91EA6812E0084A284 /* PreferencesWindow.xib in Resources */,
 				35FD1DED1EA66E840084A284 /* MainMenu.xib in Resources */,
 				35F0ADE91EA6E44100840185 /* AboutWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B774A21EA9AC0E00715CBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B774B01EA9AC0E00715CBC /* Assets.xcassets in Resources */,
+				A1B774B31EA9AC0E00715CBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +256,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1B774A01EA9AC0E00715CBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B774AB1EA9AC0E00715CBC /* main.m in Sources */,
+				A1B774A81EA9AC0E00715CBC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -162,6 +274,14 @@
 				35FD1DEC1EA66E840084A284 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A1B774B11EA9AC0E00715CBC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1B774B21EA9AC0E00715CBC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -261,11 +381,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = seneca/seneca.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SLF4JZ244S;
 				INFOPLIST_FILE = seneca/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.edu.uniandes.seneca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,12 +399,53 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = seneca/seneca.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SLF4JZ244S;
 				INFOPLIST_FILE = seneca/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.edu.uniandes.seneca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A1B774B61EA9AC0E00715CBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "seneca helper/seneca helper.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SLF4JZ244S;
+				INFOPLIST_FILE = "seneca helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.edu.uniandes.seneca-helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		A1B774B71EA9AC0E00715CBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "seneca helper/seneca helper.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SLF4JZ244S;
+				INFOPLIST_FILE = "seneca helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.edu.uniandes.seneca-helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -303,6 +469,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A1B774B51EA9AC0E00715CBC /* Build configuration list for PBXNativeTarget "seneca helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B774B61EA9AC0E00715CBC /* Debug */,
+				A1B774B71EA9AC0E00715CBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

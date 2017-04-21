@@ -1,4 +1,5 @@
 import Cocoa
+import ServiceManagement
 
 // Blank text field default string
 let BLANK_FIELD_TEXT = ""
@@ -17,6 +18,9 @@ let STATUS_DISCONNECTED_ICON = "NSStatusUnavailable"
 
 let STATUS_UNAVAILABLE_MESSAGE = "No estás en SENECA"
 let STATUS_UNAVAILABLE_ICON = "NSStatusNone"
+
+// Define helper bundler identifier
+let APP_BUNDLER_INDENTIFIER = "co.edu.uniandes.seneca-helper" as CFString
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
@@ -64,11 +68,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
     func preferencesDidUpdate() {
         // Load the persistence unit
         let defaults = UserDefaults.standard
-
-        // print
-        print("User account:", defaults.string(forKey: ACCOUNT)!)
-        print("User password:", defaults.string(forKey: PASSWORD)!)
-        print("Start at login:", defaults.integer(forKey: START))
+        
+        // Configure the autolaunch at login option
+        let enabled = defaults.integer(forKey: START) == NSOnState
+        SMLoginItemSetEnabled(APP_BUNDLER_INDENTIFIER, enabled)
     }
     
     func changeStatusToConnected() {
