@@ -1,7 +1,7 @@
 import Foundation
 import CoreWLAN
 
-class SENECALoginController {
+class SenecaLoginController {
     
     let BASE_URL = "https://wlan.uniandes.edu.co/login.html"
     

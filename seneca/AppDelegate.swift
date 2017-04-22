@@ -60,8 +60,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         // Default status at startup
         changeStatusToDisconnected()
         
-        //let connectionController = SENECALoginController()
-        //print(connectionController.isSenecaReacheable())
+        // Check if SENECA is current SSID
+        let connectionController = SenecaLoginController()
+        print(connectionController.isSenecaCurrentSSID())
     }
     
     func preferencesDidUpdate() {
