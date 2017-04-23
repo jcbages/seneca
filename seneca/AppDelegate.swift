@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, PreferencesWindowDelegate {
         aboutWindow = AboutWindow()
         
         // Default status at startup
-        changeStatusToDisconnected()
+        changeSatusToUnavailable()
         
         // Check if SENECA is current SSID
         let connectionController = SenecaLoginController()
