@@ -6,9 +6,15 @@ let NAME_LABEL_TEXT = "seneca"
 
 let CONTACT_EMAIL = "jc.bages10@uniandes.edu.co"
 
+let SUPPORT_MESSAGE = "Si tienes algúna duda, escríbenos a alguno de estos correos"
+
 let SUPPORT_EMAIL = "sc.valencia606@uniandes.edu.co"
 
+let REPOSITORY_MESSAGE = "Si nos quieres apoyar, entra a"
+
 let REPOSITORY_LINK = "https://github.com/jcbages/seneca"
+
+let MAIN_FONT = "Helvetica Neue Light"
 
 class AboutWindow: NSWindowController {
 
@@ -49,26 +55,26 @@ class AboutWindow: NSWindowController {
         self.logoIcon.image = NSImage(named: "logo")
         
         // Handling the project name label
-        self.nameLabel.font = NSFont(name: "Helvetica Neue Light", size: 16)
+        self.nameLabel.font = NSFont(name: MAIN_FONT, size: 16)
         
         // Handling the project version label
         self.versionLabel.stringValue = "Versión \(APP_VERSION)"
-        self.versionLabel.font = NSFont(name: "Helvetica Neue Light", size: 10)
+        self.versionLabel.font = NSFont(name: MAIN_FONT, size: 10)
         
-        self.contactEmailLabel.stringValue = "Si tienes algúna duda, escríbenos a alguno de estos correos"
-        self.contactEmailLabel.font = NSFont(name: "Helvetica Neue Light", size: 12)
+        self.contactEmailLabel.stringValue = SUPPORT_MESSAGE
+        self.contactEmailLabel.font = NSFont(name: MAIN_FONT, size: 12)
         
         self.emailLabel.stringValue = CONTACT_EMAIL
-        self.emailLabel.font = NSFont(name: "Helvetica Neue Light", size: 12)
+        self.emailLabel.font = NSFont(name: MAIN_FONT, size: 12)
         
         self.supportEmailLabel.stringValue = SUPPORT_EMAIL
-        self.supportEmailLabel.font = NSFont(name: "Helvetica Neue Light", size: 12)
+        self.supportEmailLabel.font = NSFont(name: MAIN_FONT, size: 12)
         
-        self.supportRepositoryLabel.stringValue = "Si nos quieres apoyar, entra a"
-        self.supportRepositoryLabel.font = NSFont(name: "Helvetica Neue Light", size: 12)
+        self.supportRepositoryLabel.stringValue = REPOSITORY_MESSAGE
+        self.supportRepositoryLabel.font = NSFont(name: MAIN_FONT, size: 12)
         
         self.repositoryLabel.stringValue = REPOSITORY_LINK
-        self.repositoryLabel.font = NSFont(name: "Helvetica Neue Light", size: 12)
+        self.repositoryLabel.font = NSFont(name: MAIN_FONT, size: 12)
     }
     
 }
