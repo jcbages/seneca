@@ -390,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.edu.uniandes.seneca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -408,7 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.edu.uniandes.seneca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -428,6 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.edu.uniandes.seneca-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -446,6 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.edu.uniandes.seneca-helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
