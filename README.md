@@ -48,7 +48,6 @@ Some suggestions to help us if you like the idea of safety and you're an Uniandi
 - [ ] Check if its connected to SENECA
 - [ ] Listen to connection changes on WiFi
 - [ ] Check connection every X time
-- [ ] Sleep so battery consumption is ~0
 - [ ] Perform automatic connection with credentials
 
 ## Contact
