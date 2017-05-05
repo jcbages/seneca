@@ -6,12 +6,16 @@ protocol PreferencesWindowDelegate {
 
 class PreferencesWindow: NSWindowController, NSWindowDelegate {
     
+    // Set the delegate to follow the PreferencesWindowDelegate protocol
     var delegate: PreferencesWindowDelegate?
 
+    // Pointer to "start at login" checkbox
     @IBOutlet weak var startAtLoginCheckBox: NSButton!
     
+    // Pointer to username textbox
     @IBOutlet weak var accountTextField: NSTextField!
     
+    // Pointer to password textbox
     @IBOutlet weak var passwordTextField: NSSecureTextField!
     
     override var windowNibName : String! {
@@ -21,6 +25,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
 
+        // Configure window
         self.window?.center()
         self.window?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
