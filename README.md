@@ -1,6 +1,4 @@
-# [DEPRECATED] seneca
-This project is no longer maintained and it may be broken.
-Now Uniandes does automatic login so this is no longer needed.
+# seneca
 
 ![](utils/img/banner.png)
 
