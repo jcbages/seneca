@@ -1,9 +1,9 @@
 # seneca
 
-![](utils/img/banner.png)
-
 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/RD17/ambar/blob/master/License.txt)
+
+![](utils/img/banner.png)
 
 **seneca** is a simple OS X app to automate the boring process of login to the main WiFi network at Universidad de los Andes. If you like **seneca** please :star: it!
 
