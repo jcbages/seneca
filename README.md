@@ -1,11 +1,14 @@
+# DEPRECATED
+This project is no longer maintained and it may be broken.
+Now Uniandes does automatic login so this is no longer needed.
+
 ![](utils/img/banner.png)
 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 [![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg)](https://ambar.cloud)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/RD17/ambar/blob/master/License.txt)
 
 **seneca** is a simple OS X app to automate the boring process of login to the main WiFi network at Universidad de los Andes. If you like **seneca** please :star: it!
-
-
 
 ## Features
 
